@@ -1,3 +1,5 @@
+package problem
+
 func scoreOfString(s string) {
 	var sum int
 	for i := 0; i < len(s)-1; i++ {
