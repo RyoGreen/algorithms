@@ -1,6 +1,6 @@
 use proconio::input;
 
-fn main() {
+pub fn placing_marbles() {
     input! {
         a: String,
     }

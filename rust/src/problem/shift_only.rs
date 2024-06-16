@@ -1,6 +1,6 @@
 use proconio::input;
 
-fn main() {
+pub fn shift_only() {
     input! {
         n:i32,
         mut nums:[i32;n],

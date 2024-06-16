@@ -1,6 +1,6 @@
 use proconio::input;
 
-fn main() {
+pub fn day_dream() {
     input! {
         s: String,
     };

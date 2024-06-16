@@ -1,6 +1,6 @@
 use proconio::input;
 
-fn main() {
+pub fn welcome_to_atcoder() {
     input! {
         a:i32,
         b:[i32;2],
