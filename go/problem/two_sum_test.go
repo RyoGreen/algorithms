@@ -1,7 +1,6 @@
 package problem
 
 import (
-	"fmt"
 	"testing"
 )
 
@@ -23,10 +22,7 @@ func TestTwoSum(t *testing.T) {
 func BenchmarkTwoSum(b *testing.B) {
 	var nums = []int{2, 7, 11, 15}
 	var target = 9
-	var num int
 	for i := 0; i < b.N; i++ {
-		num++
 		TwoSum(nums, target)
 	}
-	fmt.Println(num)
 }
