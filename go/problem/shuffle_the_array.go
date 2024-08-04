@@ -6,5 +6,4 @@ func shuffle(nums []int, n int) []int {
 		result = append(result, nums[i], nums[i+n])
 	}
 	return result
-
 }
