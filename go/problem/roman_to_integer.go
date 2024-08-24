@@ -8,14 +8,20 @@ L             50
 C             100
 D             500
 M             1000
+
+Input: s = "MCMXCIV"
+Output: 1994
 */
 
 func RomanToInt(s string) int {
 	var result int
-	for _, v := range []rune(s) {
-		result += helperRomanToInt(string(v))
+	for i := 0; i < len(s); i++ {
+		if i+1 < len(s) && helperRomanToInt(string(s[i])) < helperRomanToInt(string(s[i+1])) {
+			result -= helperRomanToInt(string(s[i]))
+		} else {
+			result += helperRomanToInt(string(s[i]))
+		}
 	}
-
 	return result
 }
 
