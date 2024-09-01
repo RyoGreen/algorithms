@@ -50,3 +50,13 @@ func quickSort(n []int) []int {
 
 	return result
 }
+
+func MissingNumber(nums []int) int {
+	l := len(nums)
+	expectedSum := l * (l + 1) / 2
+	var sum int
+	for _, v := range nums {
+		sum += v
+	}
+	return expectedSum - sum
+}
