@@ -13,7 +13,7 @@ func mergeTwoLists(list1 *ListNode, list2 *ListNode) *ListNode {
 			break
 		}
 	}
-	s2 := []int
+	s2 := []int{}
 	for {
 		s = append(s, list1.Val)
 		if list1.Next == nil {
