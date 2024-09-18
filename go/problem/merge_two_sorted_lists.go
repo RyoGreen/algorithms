@@ -1,9 +1,6 @@
 package problem
 
-type ListNode struct {
-	Val  int
-	Next *ListNode
-}
+import "fmt"
 
 func mergeTwoLists(list1 *ListNode, list2 *ListNode) *ListNode {
 	s := []int{}

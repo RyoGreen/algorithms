@@ -2,7 +2,7 @@ package problem
 
 import "testing"
 
-func TestmergeTwoLists(t *testing.T) {
+func TestMergeTwoLists(t *testing.T) {
 	tests := []struct {
 		name  string
 		list1 *ListNode

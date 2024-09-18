@@ -1,15 +1,5 @@
 package problem
 
-type TreeNode struct {
-	Val   int
-	Left  *TreeNode
-	Right *TreeNode
-}
-
-type BST struct {
-	Root *TreeNode
-}
-
 func (bst *BST) insert(val int) {
 	n := &TreeNode{Val: val}
 	if bst.Root == nil {
