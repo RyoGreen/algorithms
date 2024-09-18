@@ -1,23 +1,6 @@
 package problem
 
-import "fmt"
-
 func mergeTwoLists(list1 *ListNode, list2 *ListNode) *ListNode {
-	s := []int{}
-	for {
-		s = append(s, list1.Val)
-		if list1.Next == nil {
-			break
-		}
-	}
-	s2 := []int{}
-	for {
-		s = append(s, list1.Val)
-		if list1.Next == nil {
-			break
-		}
-
-	}
-
+	list1.Next = list2
 	return list1
 }
