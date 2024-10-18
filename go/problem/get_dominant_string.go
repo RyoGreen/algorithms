@@ -1,4 +1,4 @@
-package pastinterview
+package problem
 
 func getDominantStringCount(s string) int {
 	n := len(s)

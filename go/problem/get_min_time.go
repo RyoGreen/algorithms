@@ -1,4 +1,4 @@
-package pastinterview
+package problem
 
 func GetMinTime(n int, request string, mingap int) int {
 	lastProcessed := make(map[rune]int)
