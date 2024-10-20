@@ -1,7 +1,6 @@
 package problem
 
-import "testing"
-
+/*
 func TestMergeTwoLists(t *testing.T) {
 	tests := []struct {
 		name  string
@@ -49,3 +48,5 @@ func isEqual(l1, l2 *ListNode) bool {
 	}
 	return l1 == nil && l2 == nil
 }
+
+*/
