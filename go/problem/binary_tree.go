@@ -35,3 +35,18 @@ func inorderTraversal(root *TreeNode) []int {
 	result = append(result, inorderTraversal(root.Right)...)
 	return result
 }
+
+func isValidBST(root *TreeNode) bool {
+	var nums []int
+	nums = append(nums, inorderTraversal(root.Left)...)
+	nums = append(nums, root.Val)
+	nums = append(nums, inorderTraversal(root.Right)...)
+
+	for i := 0; i < len(nums)-1; i++ {
+		if nums[i] >= nums[i+1] {
+			return false
+		}
+	}
+
+	return true
+}
