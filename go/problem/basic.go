@@ -1,7 +1,6 @@
 package problem
 
-func is_prime(n int) bool {
-
+func isPrime(n int) bool {
 	if n < 2 {
 		return false
 	}
