@@ -12,7 +12,7 @@ func isPrime(n int) bool {
 		return false
 	}
 
-	for i := 5; i*i <= n; i++ {
+	for i := 5; i*i <= n; i = i + 2 {
 		if n%i == 0 {
 			return false
 		}
