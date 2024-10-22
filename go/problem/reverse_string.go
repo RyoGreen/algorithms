@@ -30,6 +30,9 @@ func ReverseInt(x int) int {
 	}
 
 	result, _ := strconv.Atoi(string(r))
+	if result > math.MaxInt32 {
+		return 0
+	}
 	if !isPlus {
 		return -result
 	}
