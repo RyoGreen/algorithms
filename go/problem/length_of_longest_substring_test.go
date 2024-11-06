@@ -7,7 +7,7 @@ func TestLengthOfLongestSubstring(t *testing.T) {
 		input    string
 		expected int
 	}{
-		{"abcabcbb", 2},
+		{"abcabcbb", 3},
 		{"bbbbb", 1},
 		{"pwwkew", 3},
 		{"", 0},
