@@ -5,14 +5,23 @@ Input: prices = [7,1,5,3,6,4]
 Output: 5
 */
 func maxProfit(prices []int) int {
-	var result int
-	for i := 0; i < len(prices)-1; i++ {
-		for j := i + 1; j < len(prices); j++ {
-			profit := prices[j] - prices[i]
+	if len(prices) < 1 {
+		return 0
+	}
+	var (
+		result    int
+		buyAmount = prices[0]
+	)
+	for _, v := range prices {
+		if v < buyAmount {
+			buyAmount = v
+		} else {
+			profit := v - buyAmount
 			if profit > result {
 				result = profit
 			}
 		}
 	}
+
 	return result
 }
