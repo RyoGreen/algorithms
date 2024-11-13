@@ -33,3 +33,27 @@ func countIslands(grid [][]int) int {
 
 	return island
 }
+
+func closedIsland(grid [][]int) int {
+	if len(grid) < 1 {
+		return 0
+	}
+	var (
+		rows   = len(grid)
+		cols   = len(grid[0])
+		island = 0
+	)
+
+	var dfs func(int, int)
+	dfs = func(i, j int) {
+
+	}
+
+	for i := 0; i < rows; i++ {
+		for j := 0; j < cols; j++ {
+		}
+	}
+
+	return island
+
+}
