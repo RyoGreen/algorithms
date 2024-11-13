@@ -38,22 +38,42 @@ func closedIsland(grid [][]int) int {
 	if len(grid) < 1 {
 		return 0
 	}
-	var (
-		rows   = len(grid)
-		cols   = len(grid[0])
-		island = 0
-	)
 
-	var dfs func(int, int)
-	dfs = func(i, j int) {
+	rows, cols := len(grid), len(grid[0])
+	island := 0
 
+	visit := make(map[int]map[int]bool)
+	for i := 0; i < rows; i++ {
+		visit[i] = make(map[int]bool)
 	}
 
-	for i := 0; i < rows; i++ {
-		for j := 0; j < cols; j++ {
+	var dfs func(int, int) bool
+	dfs = func(i, j int) bool {
+		if i < 0 || j < 0 || i == rows || j == cols {
+			return false
+		}
+		if grid[i][j] == 1 || visit[i][j] {
+			return true
+		}
+		visit[i][j] = true
+
+		up := dfs(i-1, j)
+		down := dfs(i+1, j)
+		left := dfs(i, j-1)
+		right := dfs(i, j+1)
+
+		return up && down && left && right
+	}
+
+	for i := 1; i < rows-1; i++ {
+		for j := 1; j < cols-1; j++ {
+			if grid[i][j] == 0 && !visit[i][j] {
+				if dfs(i, j) {
+					island++
+				}
+			}
 		}
 	}
 
 	return island
-
 }
