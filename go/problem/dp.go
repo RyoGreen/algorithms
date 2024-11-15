@@ -12,3 +12,16 @@ func climbStairs(n int) int {
 
 	return second
 }
+
+func fibonacci(n int) int {
+	if n < 2 {
+		return n
+	}
+
+	first, second := 0, 1
+	for i := 0; i <= n; i++ {
+		second, first = first, first+second
+	}
+
+	return second
+}
