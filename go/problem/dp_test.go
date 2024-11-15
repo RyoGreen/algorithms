@@ -3,7 +3,6 @@ package problem
 import "testing"
 
 func TestFibonacci(t *testing.T) {
-	// テストケースの定義
 	tests := []struct {
 		input    int
 		expected int
