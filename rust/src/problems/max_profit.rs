@@ -5,18 +5,19 @@ impl Solution {
             return 0;
         }
         let mut result: i32 = 0;
-        let mut buy_amout: i32 = prices[0];
+        let mut buy_amount: i32 = prices[0];
 
         for &num in prices.iter() {
-            if num < buy_amout {
-                buy_amout = num;
+            if num < buy_amount {
+                buy_amount = num;
             } else {
-                let profit: i32 = num - buy_amout;
+                let profit: i32 = num - buy_amount;
                 if profit > result {
                     result = profit;
                 }
             }
         }
+
         result
     }
 }
