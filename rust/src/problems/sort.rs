@@ -1,7 +1,7 @@
 pub struct Solution;
 
 impl Solution {
-    pub fn quick_sort(mut prices: Vec<i32>) -> Vec<i32> {
+    pub fn quick_sort(mut arr: Vec<i32>) -> Vec<i32> {
         fn quicksort(arr: &mut [i32]) {
             if arr.len() <= 1 {
                 return;
@@ -24,7 +24,7 @@ impl Solution {
             i
         }
 
-        quicksort(&mut prices);
-        prices
+        quicksort(&mut arr);
+        arr
     }
 }
