@@ -27,14 +27,15 @@ impl Solution {
         quicksort(&mut arr);
         arr
     }
-    pub fn bobble_sort(mut arr: Vec<i32>) -> Vec<i32> {
+    pub fn bubble_sort(mut arr: Vec<i32>) -> Vec<i32> {
         if arr.is_empty() {
             return arr;
         }
-        for i in 0..arr.len() {
-            for j in i..arr.len() {
-                if arr[i] > arr[j] {
-                    arr.swap(i, j);
+        let length = arr.len();
+        for i in 0..length {
+            for j in 0..(length - i - 1) {
+                if arr[j] > arr[j + 1] {
+                    arr.swap(j, j + 1);
                 }
             }
         }
