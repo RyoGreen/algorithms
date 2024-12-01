@@ -28,9 +28,6 @@ impl Solution {
         arr
     }
     pub fn bubble_sort(mut arr: Vec<i32>) -> Vec<i32> {
-        if arr.is_empty() {
-            return arr;
-        }
         let length = arr.len();
         for i in 0..length {
             for j in 0..(length - i - 1) {
