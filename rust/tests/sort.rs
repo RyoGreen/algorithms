@@ -10,6 +10,6 @@ fn test_quick_sort() {
 #[test]
 fn test_bubble_sort() {
     let nums = vec![15, 11, 7, 2];
-    let sorted = Solution::bobble_sort(nums.clone());
+    let sorted = Solution::bubble_sort(nums.clone());
     assert_eq!(sorted, vec![2, 7, 11, 15]);
 }
