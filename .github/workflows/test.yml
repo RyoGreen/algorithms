@@ -30,12 +30,7 @@ jobs:
         with:
           toolchain: stable
 
-      - name: Install dependencies
-        run: |
-          cd ./../rust
-          cargo build
-
       - name: Run Rust Tests
         run: |
-          cd rust
+          cd ./../rust
           cargo test
