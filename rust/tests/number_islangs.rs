@@ -1,4 +1,3 @@
-/*
 use rust::problems::number_islands::Solution;
 
 #[test]
@@ -49,4 +48,3 @@ fn test_num_islands_no_island() {
     ];
     assert_eq!(Solution::num_islands(grid), 0);
 }
-*/
