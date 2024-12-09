@@ -16,6 +16,11 @@ var sortTestDatas = []struct {
 		expected: []int{1, 2, 3, 4, 5},
 	},
 	{
+		name:     "Basic sorting v2",
+		input:    []int{3, 1, 2, 5, 4, 6},
+		expected: []int{1, 2, 3, 4, 5, 6},
+	},
+	{
 		name:     "Empty array",
 		input:    []int{},
 		expected: []int{},
