@@ -1,7 +1,9 @@
-name: Test
+name: Test Go
 
 on:
   push:
+    paths:
+      - "go/**"
     branches: [main]
 
 jobs:
@@ -24,13 +26,3 @@ jobs:
 
       - name: Run Tests
         run: go test -v ./...
-
-      - name: Set up Rust
-        uses: actions-rs/toolchain@v1
-        with:
-          toolchain: stable
-
-      - name: Run Rust Tests
-        run: |
-          cd ./../rust
-          cargo test

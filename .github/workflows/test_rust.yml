@@ -1,0 +1,25 @@
+name: Test RUST
+
+on:
+  push:
+    paths:
+      - "rust/**"
+    branches: [main]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: ./rust
+    steps:
+      - name: Check out code
+        uses: actions/checkout@v4
+
+      - name: Set up Rust
+        uses: actions-rs/toolchain@v1
+        with:
+          toolchain: stable
+
+      - name: Run Rust Tests
+        run: cargo test
