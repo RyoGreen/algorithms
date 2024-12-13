@@ -8,7 +8,7 @@ impl Solution {
         sorted_nums.sort();
 
         for i in 0..sorted_nums.len() {
-            if sorted_nums[i] >= 1 {
+            if sorted_nums[i] > 0 {
                 break;
             }
             if i > 0 && sorted_nums[i] == sorted_nums[i - 1] {
@@ -28,6 +28,8 @@ impl Solution {
                         while left < right && sorted_nums[right] == sorted_nums[right - 1] {
                             right -= 1;
                         }
+                        left += 1;
+                        right -= 1;
                     }
                     Ordering::Less => left += 1,
                     Ordering::Greater => right -= 1,
