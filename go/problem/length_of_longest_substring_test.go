@@ -15,6 +15,7 @@ func TestLengthOfLongestSubstring(t *testing.T) {
 		{"abcdabcde", 5},
 		{"dvdf", 3},
 		{"abcdeabcd", 5},
+		{"abcabcdabcdef", 6},
 	}
 
 	for _, test := range tests {
