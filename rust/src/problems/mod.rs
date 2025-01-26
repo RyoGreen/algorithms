@@ -1,3 +1,4 @@
+pub mod car_fleet;
 pub mod easy_challenge;
 pub mod length_of_longest_substring;
 pub mod longest_palindrome;
