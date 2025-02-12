@@ -29,3 +29,14 @@ func MissingNumber(nums []int) int {
 	}
 	return expectedSum - sum
 }
+
+func Fib(n int) int {
+	if n < 2 {
+		return n
+	}
+	prev, next := 0, 1
+	for i := 2; i <= n; i++ {
+		prev, next = next, prev+next
+	}
+	return next
+}
