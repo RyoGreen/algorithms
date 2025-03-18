@@ -22,8 +22,8 @@ func countIslands(grid [][]int) int {
 
 	}
 
-	for i := 0; i < rows; i++ {
-		for j := 0; j < cols; j++ {
+	for i := range rows {
+		for j := range cols {
 			if grid[i][j] == 1 {
 				island++
 				dfs(i, j)
@@ -43,7 +43,7 @@ func closedIsland(grid [][]int) int {
 	island := 0
 
 	visit := make(map[int]map[int]bool)
-	for i := 0; i < rows; i++ {
+	for i := range rows {
 		visit[i] = make(map[int]bool)
 	}
 
