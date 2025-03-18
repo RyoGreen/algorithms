@@ -8,7 +8,7 @@ func productExceptSelf(nums []int) []int {
 		right  = 1
 	)
 
-	for i := 0; i < length; i++ {
+	for i := range length {
 		result[i] = left
 		left *= nums[i]
 	}
