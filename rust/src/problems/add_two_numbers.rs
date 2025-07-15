@@ -1,6 +1,6 @@
-pub struct Solution;
 use crate::problems::structs::ListNode;
 
+pub struct Solution;
 impl Solution {
     pub fn add_two_numbers(
         l1: Option<Box<ListNode>>,
