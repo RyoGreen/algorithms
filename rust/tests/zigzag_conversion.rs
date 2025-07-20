@@ -31,7 +31,13 @@ mod tests {
             let result = Solution::convert(case.input.to_string(), case.num_rows);
             assert_eq!(
                 result, case.expected,
-                "convert_v1 failed at case {}: input='{}', num_rows={}",
+                "convert failed at case {}: input='{}', num_rows={}",
+                i, case.input, case.num_rows
+            );
+            let result = Solution::convert_v2(case.input.to_string(), case.num_rows);
+            assert_eq!(
+                result, case.expected,
+                "convert_v2 failed at case {}: input='{}', num_rows={}",
                 i, case.input, case.num_rows
             );
         }

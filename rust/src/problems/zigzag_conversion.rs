@@ -19,4 +19,16 @@ impl Solution {
 
         rows.concat()
     }
+    pub fn convert_v2(s: String, num_rows: i32) -> String {
+        if num_rows <= 1 {
+            return s;
+        }
+        let mut result = "".to_string();
+        for (i, c) in s.char_indices() {
+            if i == 0 {
+                result.push(c);
+            }
+        }
+        result
+    }
 }
