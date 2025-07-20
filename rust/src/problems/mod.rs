@@ -13,3 +13,4 @@ pub mod sort;
 pub mod structs;
 pub mod three_sum;
 pub mod two_sum;
+pub mod zigzag_conversion;
