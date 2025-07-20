@@ -24,9 +24,18 @@ impl Solution {
             return s;
         }
         let mut result = "".to_string();
-        for (i, c) in s.char_indices() {
-            if i == 0 {
-                result.push(c);
+        for row in 0..num_rows {
+            let increment = 2 * (num_rows - 1);
+            for i in (row..s.len() as i32).step_by(increment as usize) {
+                if let Some(c) = s.chars().nth(i as usize) {
+                    result.push(c);
+                }
+                let middle_index = i + increment - 2 * row;
+                if row > 0 && row < num_rows - 1 && middle_index < s.len() as i32 {
+                    if let Some(c) = s.chars().nth(middle_index as usize) {
+                        result.push(c);
+                    }
+                }
             }
         }
         result
