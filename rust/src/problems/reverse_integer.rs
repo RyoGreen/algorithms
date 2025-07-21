@@ -18,7 +18,7 @@ impl Solution {
             };
         }
 
-        if is_nagative == true {
+        if is_nagative {
             result = -result
         }
         result
