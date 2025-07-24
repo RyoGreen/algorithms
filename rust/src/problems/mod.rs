@@ -1,5 +1,6 @@
 pub mod add_two_numbers;
 pub mod car_fleet;
+pub mod delete_duplicate;
 pub mod easy_challenge;
 pub mod fib;
 pub mod first_uniq_char;

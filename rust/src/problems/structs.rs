@@ -1,4 +1,4 @@
-use std::{cell::RefCell, cmp, rc::Rc};
+use std::{cell::RefCell, rc::Rc};
 
 #[derive(PartialEq, Eq, Clone, Debug)]
 pub struct ListNode {
