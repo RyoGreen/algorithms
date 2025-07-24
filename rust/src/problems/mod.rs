@@ -4,6 +4,7 @@ pub mod delete_duplicate;
 pub mod easy_challenge;
 pub mod fib;
 pub mod first_uniq_char;
+pub mod int_to_roman;
 pub mod is_subsequence;
 pub mod length_of_longest_substring;
 pub mod longest_palindrome;
