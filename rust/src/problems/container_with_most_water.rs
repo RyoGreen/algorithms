@@ -14,4 +14,19 @@ impl Solution {
         }
         area
     }
+    pub fn max_area_v2(height: Vec<i32>) -> i32 {
+        let mut area = 0;
+        let mut left = 0;
+        let mut right = height.len() - 1;
+        while right > left {
+            let tmp = (right - left) as i32 * (cmp::min(height[left], height[right]));
+            area = cmp::max(tmp, area);
+            if height[right] > height[left] {
+                left += 1
+            } else {
+                right -= 1
+            }
+        }
+        area
+    }
 }
