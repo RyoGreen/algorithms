@@ -23,11 +23,16 @@ impl Solution {
             current.next = Some(Box::new(ListNode::new(sum % 10)));
             current = current.next.as_mut().unwrap();
 
-            if let Some(node) = p1 {
-                p1 = node.next.as_ref();
+            if let Some(node) = l1 {
+                l1 = node.next.as_ref();
+            } else {
+                l1 = None;
             }
-            if let Some(node) = p2 {
-                p2 = node.next.as_ref();
+
+            if let Some(node) = l2 {
+                l2 = node.next.as_ref();
+            } else {
+                l2 = None;
             }
         }
 
