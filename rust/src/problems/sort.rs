@@ -27,6 +27,26 @@ impl Solution {
         quicksort(&mut arr);
         arr
     }
+    pub fn quick_sort_v2(mut arr: Vec<i32>) -> Vec<i32> {
+        if arr.len() <= 1 {
+            return arr;
+        }
+        let pivot = arr[0];
+        let mut left = Vec::new();
+        let mut right = Vec::new();
+        for &x in &arr[1..] {
+            if x < pivot {
+                left.push(x);
+            } else {
+                right.push(x);
+            }
+        }
+        left = Self::quick_sort_v2(left);
+        right = Self::quick_sort_v2(right);
+        left.push(pivot);
+        left.append(&mut right);
+        left
+    }
     pub fn bubble_sort(mut arr: Vec<i32>) -> Vec<i32> {
         let length = arr.len();
         for i in 0..length {
