@@ -27,7 +27,7 @@ impl Solution {
         quicksort(&mut arr);
         arr
     }
-    pub fn quick_sort_v2(mut arr: Vec<i32>) -> Vec<i32> {
+    pub fn quick_sort_v2(arr: Vec<i32>) -> Vec<i32> {
         if arr.len() <= 1 {
             return arr;
         }
