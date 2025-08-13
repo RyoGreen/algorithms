@@ -14,4 +14,19 @@ impl Solution {
             0
         }
     }
+    pub fn min_depth(root: Option<Rc<RefCell<TreeNode>>>) -> i32 {
+        if let Some(node) = root {
+            let left = Solution::min_depth(node.borrow().left.clone());
+            let right = Solution::min_depth(node.borrow().right.clone());
+            if left == 0 {
+                return right + 1;
+            }
+            if right == 0 {
+                return left + 1;
+            }
+            cmp::min(left, right) + 1
+        } else {
+            0
+        }
+    }
 }
