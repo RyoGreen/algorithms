@@ -29,4 +29,26 @@ impl Solution {
             0
         }
     }
+    pub fn merge_trees(
+        root1: Option<Rc<RefCell<TreeNode>>>,
+        root2: Option<Rc<RefCell<TreeNode>>>,
+    ) -> Option<Rc<RefCell<TreeNode>>> {
+        if root1.is_none() {
+            return root2;
+        }
+        if root2.is_none() {
+            return root1;
+        }
+
+        if let (Some(r1), Some(r2)) = (root1, root2) {
+            let val = r1.borrow().val + r2.borrow().val;
+
+            let left = Solution::merge_trees(r1.borrow().left.clone(), r2.borrow().left.clone());
+            let right = Solution::merge_trees(r1.borrow().right.clone(), r2.borrow().right.clone());
+
+            Some(Rc::new(RefCell::new(TreeNode { val, left, right })))
+        } else {
+            None
+        }
+    }
 }
