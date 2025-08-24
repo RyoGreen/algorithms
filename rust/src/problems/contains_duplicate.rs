@@ -1,4 +1,5 @@
 pub struct Solution;
+pub use std::collections::{HashMap, HashSet};
 
 impl Solution {
     pub fn contains_duplicate(nums: Vec<i32>) -> bool {
