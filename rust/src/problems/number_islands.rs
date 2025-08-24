@@ -24,7 +24,6 @@ impl Solution {
         }
 
         grid[i][j] = '0';
-
         if i > 0 {
             Solution::dfs(grid, i - 1, j, rows, cols);
         }
