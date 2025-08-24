@@ -18,6 +18,7 @@ pub mod merge_two_lists;
 pub mod number_islands;
 pub mod remove_depulicates;
 pub mod reverse_integer;
+pub mod rotate;
 pub mod sort;
 pub mod structs;
 pub mod three_sum;
