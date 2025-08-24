@@ -1,6 +1,7 @@
 pub mod add_two_numbers;
 pub mod car_fleet;
 pub mod container_with_most_water;
+pub mod contains_duplicate;
 pub mod delete_duplicate;
 pub mod easy_challenge;
 pub mod fib;
@@ -15,6 +16,7 @@ pub mod max_depth;
 pub mod max_profit;
 pub mod merge_two_lists;
 pub mod number_islands;
+pub mod remove_depulicates;
 pub mod reverse_integer;
 pub mod sort;
 pub mod structs;
