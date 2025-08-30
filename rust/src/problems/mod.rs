@@ -3,7 +3,6 @@ pub mod car_fleet;
 pub mod container_with_most_water;
 pub mod contains_duplicate;
 pub mod delete_duplicate;
-pub mod easy_challenge;
 pub mod fib;
 pub mod first_uniq_char;
 pub mod has_cycle;
