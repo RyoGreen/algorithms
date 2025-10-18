@@ -13,6 +13,7 @@ impl Solution {
 
         next
     }
+
     pub fn fib_v1(n: i32) -> i32 {
         if n < 2 {
             return n;
