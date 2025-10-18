@@ -18,6 +18,7 @@ impl Solution {
         }
         result
     }
+
     fn dfs(grid: &mut Vec<Vec<char>>, i: usize, j: usize, rows: usize, cols: usize) {
         if i >= rows || j >= cols || grid[i][j] == '0' {
             return;

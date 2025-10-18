@@ -14,6 +14,7 @@ pub mod max_area_of_island;
 pub mod max_depth;
 pub mod max_profit;
 pub mod merge_two_lists;
+pub mod move_zeros;
 pub mod number_islands;
 pub mod remove_depulicates;
 pub mod reverse_integer;
