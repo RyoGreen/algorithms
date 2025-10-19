@@ -5,13 +5,15 @@ impl Solution {
         if nums.len() <= 1 {
             return;
         }
-        for i in 0..nums.len() - 1 {
-            if nums[i] != 0 {
-                break;
+        let mut i = 0;
+        for j in 0..nums.len() {
+            if nums[j] != 0 {
+                nums[i] = nums[j];
+                i += 1
             }
-            for j in i..nums.len() - 1 {
-                (nums[j], nums[j + 1]) = (nums[j + 1], nums[j])
-            }
+        }
+        for j in i..nums.len() {
+            nums[j] = 0;
         }
     }
 }
