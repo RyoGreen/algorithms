@@ -2,6 +2,8 @@ pub struct Solution;
 use super::structs::ListNode;
 
 impl Solution {
+    // Input: head = [1,2,3,3,4,4,5]
+    // Output: [1,2,3,4,5]
     pub fn delete_duplicates(mut head: Option<Box<ListNode>>) -> Option<Box<ListNode>> {
         let mut current = head.as_mut()?;
 
