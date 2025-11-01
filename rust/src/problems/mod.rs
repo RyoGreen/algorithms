@@ -16,6 +16,7 @@ pub mod max_profit;
 pub mod merge_two_lists;
 pub mod move_zeros;
 pub mod number_islands;
+pub mod pow;
 pub mod remove_depulicates;
 pub mod reverse_integer;
 pub mod rotate;
