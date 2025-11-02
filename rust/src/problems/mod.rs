@@ -22,6 +22,7 @@ pub mod reverse_integer;
 pub mod rotate;
 pub mod sort;
 pub mod structs;
+pub mod subarray_sum;
 pub mod three_sum;
 pub mod tree;
 pub mod two_sum;
