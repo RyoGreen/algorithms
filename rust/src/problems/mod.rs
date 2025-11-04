@@ -6,6 +6,7 @@ pub mod delete_duplicate;
 pub mod fib;
 pub mod first_uniq_char;
 pub mod has_cycle;
+pub mod has_path_sum;
 pub mod int_to_roman;
 pub mod is_subsequence;
 pub mod length_of_longest_substring;
